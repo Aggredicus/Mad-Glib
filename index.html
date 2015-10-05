@@ -1,0 +1,68 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset=utf-8>
+    <title>Mad Glib</title>
+    <style>p {font-family: monospace;}</style>
+  </head> 
+  <body>
+    <h2>Mad Glib: The Movie Trailer Generator</h2>
+       <script>
+//Informs the user about the nature of the program to follow
+alert("Salutations and welcome, my friend.\n\n\
+Today we will be creating a story together.\n\
+I have created a framework for a wonderful new movie intro,\n\
+and you get to guide the plot of this exciting film of ours!\n\
+Please be creative and follow the prompts as they appear.\n\n\
+Also, be sure to have fun and copy-paste your results if you want to share!");
+
+//Prompts the user to enter words for the story
+var nounOne = prompt("Please list a POWERFUL GROUP OF PEOPLE in the field below and click \"OK\".").toLowerCase();
+var adjectiveOne = prompt("Please use an ADJECTIVE which DESCRIBES A POWERFUL THING.").toLowerCase();
+var nounTwo = prompt("Please list a POWERFUL LIVING THING.").toLowerCase();
+var nounThree = prompt("Please list a QUALITY which POWERFUL THINGS POSESS.").toLowerCase();
+var nounFour = prompt("Please list A POWERFUL STRUCTURE.").toLowerCase();
+var adjectiveTwo = prompt("Please list an ADJECTIVE which DESCRIBES A TERRIFYING OBJECT.").toLowerCase();
+var nounFive = prompt("Please list A MYSTICAL ARTIFACT.").toLowerCase();
+var nounSix = prompt("Please list a PLURAL FORM of THE MOST POWERFUL CREATURE.").toLowerCase();
+var verbOne = prompt("Please list an INFINITIVE FORM OF A VERB that DESERVES TO BE CELEBRATED. Use the format \"to _____\"");
+var nounSeven = prompt("Please list THE COOLEST HOLIDAY.");
+var adjectiveThree = prompt("Please list an ADJECTIVE which DESCRIBES SUPER COOL THINGS.");
+var storyTitle = adjectiveOne.toUpperCase() + " " + nounTwo.toUpperCase() + " and the " +  adjectiveTwo.toUpperCase() + " " + nounFive.toUpperCase();
+var catchPhrase = prompt("Please write a CATCH PHRASE that a SUPER COOL, SUPER POWERFUL PERSON WOULD SAY WHEN THERE'S WORK TO DO.");
+
+//Lets the user know that they are finished typing prompts
+alert(
+"Thank you for participating! Click \"OK\" to view movie trailer script that we came up  with together! \n\n\
+Also, if you would like to see or hack away at any of my programming as it unfolds, feel  free to visit my GitHub at https://github.com/Aggredicus\n\n\
+Enjoy your time programming!~"
+);
+
+//Structures the story into lines
+var lineOne = "In a world... Where " + nounOne + " rule the planet.";
+var lineTwo = "Only the most " + adjectiveOne + " " + nounTwo + " can make a difference.";
+var lineThree = "To muster the " + nounThree + " necessary to overthrow the " + nounOne + " " + nounFour + ",";
+var lineFour = "this " + nounTwo + " must seek out the planet's only remaining " + adjectiveTwo + " " + nounFive + ".";
+var lineFive = "Armed with the " + nounFive + " and the " + nounThree + " of one thousand " + nounSix + ",";
+var lineSix = "one " + nounTwo + " might be able " + verbOne + ".";
+var lineSeven = "This " + nounSeven + ".";
+var lineEight = "Get " + adjectiveThree + " for:";
+var lineNine = storyTitle;
+var lineTen = catchPhrase;
+
+//Combines the various lines into a single story object
+var completeStory = lineOne + "<br>" + lineTwo + "<br>" + lineThree + "<br>" + lineFour + "<br>" + lineFive + "<br>" + lineSix + "<br>" + lineSeven + "<br>" + lineEight + "<br>" + lineNine + "<br>" + lineTen;
+
+//Wraps the story in a quickly editable CSS tag
+var completeStory = "<p>" + completeStory + "</p>"
+
+//Writes the complete story to the DOM
+document.write(completeStory);
+
+//NO LONGER USED
+//Prints story to console to check for differences from DOM
+//console.log(completeStory);a
+      
+    </script>
+  </body>
+</html>
